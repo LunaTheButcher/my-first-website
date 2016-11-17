@@ -4,24 +4,15 @@
 	</head>	
 	<body>	
 		<div>
-			<h1><a href="">BTG Blog</a><h1> 
-		</div>
-		
-		<div>
-			<p>Hi there!</p>
-			<p>It works!, and I will be the greatest programmer ever!! It works!, and I w			     ill be the greatest programmer ever!!It works!, and I will be the greatest pr			  ogrammer ever!!It works!, and I will be the greatest programmer ever!!</p>
-		</div>
-	
-		<div>
-			<h2><a href="">Practice everyday nerd!</a></h2>
-		</div>	
-
-		<div>
-			<p>I shall practice every single fucking day!
-			I shall practice every single fucking day!
-			I shall practice every single fucking day!
-			I shall practice every single fucking day!</p>
+    			<h1><a href="/">Django Girls Blog</a></h1>
 		</div>
 
+		{% for post in posts %}
+    			<div>
+        			<p>published: {{ post.published_date }}</p>
+        			<h1><a href="">{{ post.title }}</a></h1>
+        			<p>{{ post.text|linebreaksbr }}</p>
+    			</div>
+		{% endfor %}
 	</body>
 </html>
